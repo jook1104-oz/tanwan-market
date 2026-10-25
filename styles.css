@@ -749,7 +749,11 @@ a { color: inherit; }
   font-weight: 900;
   font-size: 1.125rem;
   letter-spacing: .03em;
+  color: var(--ink);
+  text-decoration: none;
+  transition: background-color .15s ease;
 }
+.line-card-id:hover { background: var(--white); text-decoration: underline; text-underline-offset: 3px; }
 .line-card .btn-line { display: flex; width: fit-content; margin: 0 auto; white-space: nowrap; }
 .line-card-title { white-space: nowrap; }
 .copyright {
