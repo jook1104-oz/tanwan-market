@@ -16,7 +16,7 @@ tanwan-market/
 │   ├── cat-launch.png  # 攤玩貓發射陀螺（報名區）
 │   ├── vendor-*.png    # 攤商插畫（市集介紹）
 │   ├── scene-*.png     # 活動插畫
-│   ├── banner.png      # 橫幅（報名區；圖上寫死日期）
+│   ├── banner.png      # 橫幅（報名區；無日期）
 │   ├── line-qr.png     # LINE 加好友海報（頁尾）
 │   ├── og-image.png    # 分享到 LINE / FB 時顯示的圖（1200×630，無日期）
 │   └── favicon.png     # 瀏覽器分頁小圖示
@@ -33,13 +33,13 @@ tanwan-market/
 | --- | --- |
 | 分享標題、搜尋結果說明裡的日期 | 檔案最上方 `<title>`、`description`、`og:description`、`twitter:description` |
 | 主視覺上的日期／時間／地點小標籤 | `✏️ 日期地點（主視覺）` |
-| 時間與地點區塊（日期、營業時間、地址、停車） | `✏️ 日期、營業時間、地點` |
+| 時間與地點區塊（日期、報名截止、營業時間、地址、停車） | `✏️ 日期、營業時間、地點` |
+| 報名區的「報名截止」標籤 | `✏️ 報名截止日` |
 | 攤位費用、設備、加租、用電、自備、報到撤場 | `✏️ 攤位費用` |
-| 報名區的橫幅圖 | `✏️ banner.png` |
 
 **12 月起價格調整範例**（單日 NT$1,200、包月每天 NT$1,000）：在 `✏️ 攤位費用` 區塊裡，把貼紙文字 `11 月試營運優惠` 和 `NT$1,000` 改掉；如果要同時顯示兩種方案，可以把 `<div class="price-card">…</div>` 整塊複製一份再修改。
 
-> ⚠️ `banner.png` 圖上寫死了「11/27–11/29」，日期改了要換一張新圖（檔名維持 `banner.png` 就不用改程式）。`og-image.png` 沒有日期，不用換。
+> `banner.png` 和 `og-image.png` 圖上都沒有日期，改日期時不用換圖。
 
 > 💡 LINE／FB 會快取分享預覽。改了分享文字或圖片後，可用 [Facebook 分享偵錯工具](https://developers.facebook.com/tools/debug/) 重新抓取。
 
@@ -48,7 +48,7 @@ tanwan-market/
 1. 準備新圖片，**檔名和原本一樣**（例如新的攤玩貓還是叫 `cat-brand.png`）。
 2. 在 GitHub 打開 `assets/` 資料夾 → 右上角「Add file」→「Upload files」→ 拖曳上傳覆蓋 → Commit。
 3. 若新圖的長寬比例和舊圖不同，請到 `index.html` 找到對應的 `<img>`，把 `width`、`height` 改成新圖的像素尺寸（避免載入時版面跳動）。
-4. 建議上傳前先壓縮（例如 [TinyPNG](https://tinypng.com/)），手機載入會快很多。
+4. 上傳前請先壓縮（例如 [TinyPNG](https://tinypng.com/)），手機載入會快很多。目前 `assets/` 的圖都已用 pngquant 壓縮過（尺寸不變）。
 
 報名表連結 `https://forms.gle/8Fhi1L7nHp1qh5zT6` 出現在 3 個「立即報名」按鈕上（頁首、主視覺、報名區），換表單時在 `index.html` 搜尋 `forms.gle` 全部替換。
 
