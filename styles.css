@@ -655,7 +655,8 @@ a { color: inherit; }
   letter-spacing: .1em;
   color: var(--orange);
 }
-.contact-list a {
+.contact-list a,
+.contact-value {
   font-size: 1.125rem;
   font-weight: 700;
   color: var(--paper);
