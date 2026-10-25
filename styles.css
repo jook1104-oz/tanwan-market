@@ -420,7 +420,7 @@ a { color: inherit; }
   box-shadow: 6px 6px 0 var(--orange);
   text-align: center;
 }
-.price-card .sticker { color: var(--ink); }
+.price-card .sticker { color: var(--ink); align-self: center; }
 .price { margin: 4px 0 0; display: flex; flex-direction: column; }
 .price-unit { font-weight: 700; letter-spacing: .1em; }
 .price-amount {
@@ -432,6 +432,34 @@ a { color: inherit; }
   letter-spacing: .02em;
 }
 .price-note { margin: 6px 0 20px; font-size: .9375rem; opacity: .9; }
+.price-next {
+  margin-bottom: 20px;
+  padding-top: 18px;
+  border-top: 2px dashed rgba(245, 241, 232, .5);
+}
+.price-next h3 { font-size: 1.125rem; margin-bottom: 10px; }
+.price-next-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  list-style: none;
+  margin: 0; padding: 0;
+}
+.price-next-list li {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 8px;
+  border: 1.5px solid var(--paper);
+  border-radius: 14px;
+}
+.price-next-plan { font-weight: 700; letter-spacing: .1em; }
+.price-next-amount {
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: var(--orange);
+}
+.price-next-unit { font-size: .8125rem; opacity: .9; }
 .price-included {
   padding-top: 18px;
   border-top: 2px dashed rgba(245, 241, 232, .5);
