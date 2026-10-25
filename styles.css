@@ -594,6 +594,7 @@ a { color: inherit; }
   border-top: 2px dashed var(--paper-deep);
 }
 .faq-body p { margin: 0; }
+.faq-body p + p { margin-top: .6em; }
 .faq-body a { color: var(--orange-ink); font-weight: 700; }
 
 /* ---------- signup ---------- */
