@@ -718,13 +718,44 @@ a { color: inherit; }
   text-underline-offset: 4px;
   word-break: break-all;
 }
-.footer-qr img {
-  width: min(70%, 280px);
-  margin: 0 auto;
-  border: 3px solid var(--paper);
-  border-radius: 16px;
+.line-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  padding: 26px 22px;
+  background: var(--paper);
+  color: var(--ink);
+  border: 3px solid var(--ink);
+  border-radius: 24px;
+  box-shadow: 8px 8px 0 var(--orange);
 }
-.qr-hint { margin: 10px 0 0; text-align: center; font-size: .875rem; opacity: .85; }
+.line-card-qr { display: none; }
+.line-card-body { text-align: center; }
+.line-card-body p { margin: 0; }
+.line-card-title {
+  font-family: var(--font-fun);
+  font-size: 1.625rem;
+  line-height: 1.3;
+}
+.line-card-title span { color: var(--orange-ink); font-family: var(--font-body); font-weight: 900; }
+.line-card-sub { margin-top: 4px; font-weight: 700; }
+.line-card-id {
+  display: inline-block;
+  margin: 12px 0 16px !important;
+  padding: 2px 16px;
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: 1.125rem;
+  letter-spacing: .03em;
+  color: var(--ink);
+  text-decoration: none;
+  transition: background-color .15s ease;
+}
+.line-card-id:hover { background: var(--white); text-decoration: underline; text-underline-offset: 3px; }
+.line-card .btn-line { display: flex; width: fit-content; margin: 0 auto; white-space: nowrap; }
+.line-card-title { white-space: nowrap; }
 .copyright {
   margin: 40px 0 0;
   padding-top: 18px;
@@ -796,9 +827,21 @@ a { color: inherit; }
   .signup-text { text-align: left; }
   .signup-actions { justify-content: flex-start; }
 
-  .footer-inner { grid-template-columns: 1.2fr .8fr; }
+  .footer-inner { grid-template-columns: 1fr 1fr; align-items: stretch; gap: 48px; }
   .footer-info { text-align: left; }
   .footer-logo { margin-left: 0; }
+  .contact-list { grid-template-columns: repeat(2, max-content); gap: 14px 40px; margin-bottom: 0; }
+  .line-card { justify-content: flex-start; gap: clamp(18px, 2vw, 28px); padding: 24px clamp(20px, 2vw, 28px); }
+  .line-card-qr {
+    display: block;
+    flex: none;
+    width: clamp(140px, 12vw, 168px);
+    height: clamp(140px, 12vw, 168px);
+    border: 2px solid var(--ink);
+    border-radius: 12px;
+  }
+  .line-card-body { text-align: left; }
+  .line-card .btn-line { margin: 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {

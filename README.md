@@ -17,7 +17,8 @@ tanwan-market/
 │   ├── vendor-*.png    # 攤商插畫（市集介紹）
 │   ├── scene-*.png     # 活動插畫
 │   ├── banner.png      # 橫幅（報名區；無日期）
-│   ├── line-qr.png     # LINE 加好友海報（頁尾）
+│   ├── line-qr.png     # LINE 加好友直式海報（網頁上不使用，保留給 LINE@ 與印刷用）
+│   ├── line-qr-code.svg # 頁尾 LINE 卡片的 QR code（內容：https://lin.ee/N8RTbE3）
 │   ├── og-image.png    # 分享到 LINE / FB 時顯示的圖（1200×630，無日期）
 │   └── favicon.png     # 瀏覽器分頁小圖示
 └── docs/screenshots/   # 手機與桌機預覽截圖
