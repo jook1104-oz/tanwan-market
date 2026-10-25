@@ -2,7 +2,7 @@
 
 攤玩市集 形象網站（單頁）。純靜態 HTML／CSS，不需要任何建置工具，直接用瀏覽器打開 `index.html` 就能看到完整網站。
 
-上線網址（開啟 GitHub Pages 後）：https://jook1104-oz.github.io/tanwan-market/
+上線網址：https://tanwanmarket.com/
 
 ## 網站結構
 
@@ -69,7 +69,9 @@ tanwan-market/
 1. 到 repo 的 **Settings** → 左側 **Pages**。
 2. **Source** 選「Deploy from a branch」。
 3. **Branch** 選 `main`，資料夾選 `/ (root)`，按 **Save**。
-4. 等 1～3 分鐘，頁面上方會出現網址 https://jook1104-oz.github.io/tanwan-market/ 。
+4. 等 1～3 分鐘，頁面上方會出現網址 https://tanwanmarket.com/ 。
+
+> 已設定自訂網域 `tanwanmarket.com`（Settings → Pages → Custom domain）。repo 根目錄的 `CNAME` 檔是 GitHub 用來綁定網域的，**不要刪除或修改**。
 
 之後每次合併到 `main`，網站會自動更新（約 1～3 分鐘）。
 
