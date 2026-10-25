@@ -813,7 +813,8 @@ a { color: inherit; }
   .feature { grid-template-columns: 1fr 1fr; padding: 32px 48px; }
   .feature-text { text-align: left; }
 
-  .info-layout { grid-template-columns: 1.3fr .7fr; gap: 40px; }
+  .info-layout { grid-template-columns: 1.1fr .9fr; gap: 40px; }
+  .info-art img { width: min(100%, 520px); }
 
   .recruit-layout { grid-template-columns: 1.2fr 1fr; align-items: start; }
   .fee-layout { grid-template-columns: .9fr 1.1fr; align-items: stretch; }
