@@ -342,6 +342,48 @@ a { color: inherit; }
 /* ---------- 旋轉吧！西門 活動字標（首頁橫幅） ---------- */
 .cup-promo-title .cup-promo-event { width: min(72%, 320px); margin: 0 auto 4px; }
 
+/* ---------- 首頁：給攤商｜每個週末都有來逛的理由 ---------- */
+.vendors-why {
+  background-color: var(--white);
+  border-top: 2px dashed var(--ink);
+}
+.vendors-why-intro { display: grid; gap: 12px; align-items: center; margin-bottom: 24px; }
+.vendors-why-intro .lead { margin: 0; }
+.vendors-why-cat { width: min(55%, 220px); margin: 0 auto; }
+.vendors-why-cards {
+  list-style: none;
+  margin: 0 0 28px;
+  padding: 0;
+  display: grid;
+  grid-auto-rows: 1fr;
+  gap: 16px;
+}
+.vendors-why-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  padding: 22px 20px;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 24px;
+  box-shadow: 6px 6px 0 var(--orange);
+  text-align: center;
+}
+.vendors-why-card strong {
+  font-weight: 900;
+  font-size: clamp(1.75rem, 7vw, 2.25rem);
+  line-height: 1.2;
+  color: var(--orange);
+}
+.vendors-why-outro { text-align: center; }
+.vendors-why-outro p { font-weight: 700; }
+@media (min-width: 960px) {
+  .vendors-why-intro { grid-template-columns: 1fr 220px; gap: 40px; }
+  .vendors-why-cat { width: 100%; }
+  .vendors-why-cards { grid-template-columns: repeat(3, 1fr); align-items: stretch; gap: 20px; }
+}
+
 /* ---------- sections ---------- */
 .section { padding: 64px 0; }
 .section-alt {
