@@ -333,6 +333,7 @@ a { color: inherit; }
   font-weight: 900;
   letter-spacing: .06em;
 }
+.cup-promo-monthly { font-size: .875rem; font-weight: 900; }
 .cup-promo-co { font-size: .8125rem; font-weight: 700; }
 .cup-promo-cat { width: min(70%, 260px); margin: 4px auto 0; }
 .header-nav .nav-cup a { background: var(--orange); border: 2px solid var(--ink); padding: 4px 12px; }
