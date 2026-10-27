@@ -3,8 +3,6 @@
    共用 ../styles.css 的品牌色、按鈕、區塊、FAQ、頁尾
    ========================================================= */
 
-.nobr { display: inline-block; }
-
 .cup-page .header-nav a,
 .cup-page .header-inner .btn { white-space: nowrap; }
 

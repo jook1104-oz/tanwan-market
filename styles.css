@@ -342,6 +342,9 @@ a { color: inherit; }
 /* ---------- 旋轉吧！西門 活動字標（首頁橫幅） ---------- */
 .cup-promo-title .cup-promo-event { width: min(72%, 320px); margin: 0 auto 4px; }
 
+/* 不在中間斷行的文字片段（首頁與 /cup/ 共用） */
+.nobr { display: inline-block; }
+
 /* ---------- 首頁：給攤商｜每個週末都有來逛的理由 ---------- */
 .vendors-why {
   background-color: var(--white);
@@ -378,6 +381,9 @@ a { color: inherit; }
 }
 .vendors-why-outro { text-align: center; }
 .vendors-why-outro p { font-weight: 700; }
+@media (max-width: 959px) {
+  .vendors-why .section-head h2 { font-size: min(clamp(1.875rem, 5.5vw, 2.625rem), 7vw); }
+}
 @media (min-width: 960px) {
   .vendors-why-intro { grid-template-columns: 1fr 220px; gap: 40px; }
   .vendors-why-cat { width: 100%; }
