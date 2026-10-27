@@ -3,6 +3,8 @@
    共用 ../styles.css 的品牌色、按鈕、區塊、FAQ、頁尾
    ========================================================= */
 
+.nobr { display: inline-block; }
+
 .cup-page .header-nav a,
 .cup-page .header-inner .btn { white-space: nowrap; }
 
@@ -30,7 +32,7 @@
   margin: 0 0 6px;
   color: var(--orange-ink);
   font-weight: 900;
-  font-size: .875rem;
+  font-size: .9375rem;
   letter-spacing: .15em;
 }
 .cup-title { margin: 0; }
@@ -39,7 +41,7 @@
 .cup-sub {
   margin: 14px 0 18px;
   font-family: var(--font-fun);
-  font-size: clamp(1.25rem, 4.6vw, 1.625rem);
+  font-size: clamp(1.375rem, 5vw, 1.75rem);
   line-height: 1.4;
 }
 .cup-hero-art { position: relative; width: min(78%, 340px); margin: 0 auto; }
@@ -66,7 +68,7 @@
   border: 2px dashed var(--ink);
   border-radius: 12px;
   font-weight: 700;
-  font-size: .9375rem;
+  font-size: 1rem;
 }
 
 /* ---------- 參賽資格・名額・報名費 ---------- */
@@ -79,11 +81,11 @@
   box-shadow: 6px 6px 0 var(--orange);
   text-align: center;
 }
-.cup-stat h3 { font-size: 1.125rem; }
+.cup-stat h3 { font-size: 1.25rem; }
 .cup-stat p { margin: 0; }
 .cup-stat-num {
   font-weight: 900;
-  font-size: clamp(2.75rem, 12vw, 3.5rem);
+  font-size: clamp(3rem, 13vw, 3.75rem);
   line-height: 1.1;
   color: var(--orange);
   font-variant-numeric: tabular-nums;
@@ -127,7 +129,7 @@
   border: 2px solid var(--ink);
   border-radius: 50%;
   font-weight: 900;
-  font-size: .875rem;
+  font-size: .9375rem;
 }
 .cup-rules-art img { width: min(70%, 300px); margin: 0 auto; }
 
@@ -144,7 +146,7 @@
   box-shadow: var(--shadow-lg);
   text-align: center;
 }
-.cup-card h3 { font-size: 1.5rem; margin-bottom: 6px; }
+.cup-card h3 { font-size: 1.625rem; margin-bottom: 6px; }
 .cup-card p { color: var(--muted); }
 .cup-card .btn-disabled { margin-top: 4px; }
 .cup-card-cat { width: min(60%, 220px); margin: 0 auto; }
@@ -172,16 +174,16 @@
   box-shadow: 5px 5px 0 var(--orange);
   text-align: center;
 }
-.cup-monthly-name { font-family: var(--font-fun); font-size: 1.125rem; }
+.cup-monthly-name { font-family: var(--font-fun); font-size: 1.25rem; }
 .cup-monthly-count { font-weight: 700; }
 .cup-monthly-count strong {
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 2.25rem;
   line-height: 1.2;
   color: var(--orange);
   font-variant-numeric: tabular-nums;
 }
-.cup-monthly-main .cup-monthly-note { font-size: .9375rem; color: var(--muted); }
+.cup-monthly-main .cup-monthly-note { font-size: 1rem; color: var(--muted); }
 .cup-practice { background: var(--paper-deep); border-style: dashed; }
 .cup-practice p { margin: 0; }
 .cup-practice-tag {
@@ -193,7 +195,7 @@
   border-radius: 6px;
   color: var(--ink) !important;
   font-weight: 900;
-  font-size: .8125rem;
+  font-size: .9375rem;
   letter-spacing: .15em;
 }
 
@@ -215,8 +217,8 @@
    ========================================================= */
 @media (min-width: 640px) {
   .cup-timeline { grid-template-columns: repeat(4, 1fr); }
-  .cup-timeline span { flex-direction: column; font-size: 1rem; }
-  .cup-timeline time { font-size: 1.375rem; }
+  .cup-timeline span { flex-direction: column; font-size: 1.125rem; }
+  .cup-timeline time { font-size: 1.5rem; }
   .cup-entry { grid-template-columns: 1fr 1fr; }
   .cup-entry-card { grid-column: 1 / -1; }
 }
@@ -231,7 +233,10 @@
   .cup-title img { margin: 0; }
   .cup-hero-art { width: 100%; max-width: 440px; }
 
-  .cup-when { grid-template-columns: 1fr 1fr; gap: 28px; }
+  .cup-when { grid-template-columns: 1fr 1fr; gap: 28px; align-items: stretch; }
+  .cup-when .info-list { grid-auto-rows: 1fr; }
+  .cup-when .info-item { align-content: center; }
+  .cup-schedule { display: flex; flex-direction: column; justify-content: center; }
 
   .cup-entry { grid-template-columns: 1fr 1fr 1.6fr; align-items: stretch; }
   .cup-entry-card { grid-column: auto; display: flex; flex-direction: column; justify-content: center; }
