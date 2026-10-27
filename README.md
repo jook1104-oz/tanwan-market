@@ -8,7 +8,12 @@
 
 ```
 tanwan-market/
-├── index.html          # 網站全部內容（文字、日期、費用、連結都在這裡）
+├── index.html          # 首頁（文字、日期、費用、連結都在這裡）
+├── cup/
+│   ├── index.html      # 西門盃 第一屆公開循環賽頁面（tanwanmarket.com/cup/）
+│   └── cup.css         # 西門盃頁面專用樣式（另外共用 styles.css）
+├── sitemap.xml         # 給搜尋引擎的網址清單（首頁、/cup/）
+├── CNAME               # 自訂網域設定，不要刪
 ├── styles.css          # 樣式（品牌色、版面、手機／桌機排版）
 ├── assets/             # 圖片素材（全部 PNG）
 │   ├── logo-black.png / logo-white.png / logo-orange.png   # 字標
@@ -20,11 +25,19 @@ tanwan-market/
 │   ├── line-qr.png     # LINE 加好友直式海報（網頁上不使用，保留給 LINE@ 與印刷用）
 │   ├── line-qr-code.svg # 頁尾 LINE 卡片的 QR code（內容：https://lin.ee/N8RTbE3）
 │   ├── og-image.png    # 分享到 LINE / FB 時顯示的圖（1200×630，無日期）
-│   └── favicon.png     # 瀏覽器分頁小圖示
+│   ├── favicon.png     # 瀏覽器分頁小圖示
+│   └── cup/            # 西門盃素材（攤玩貓 cat-*.webp、字卡 ximen-cup-* / beyblade-title-* / spin-ximen-*、分享圖 og-cup.png）
 └── docs/screenshots/   # 手機與桌機預覽截圖
 ```
 
-頁面由上到下：主視覺 → 市集介紹 → 時間與地點 → 招募類型與審核標準 → 攤位費用與規則 → 常見問題 → 報名區塊 → 頁尾（聯絡我們）。
+首頁由上到下：主視覺 → 西門盃橫幅（連到 /cup/）→ 市集介紹 → 時間與地點 → 招募類型與審核標準 → 攤位費用與規則 → 常見問題 → 報名區塊 → 頁尾（聯絡我們）。
+
+## 西門盃頁面（/cup/）
+
+- 內容都在 `cup/index.html`，依序是：賽事名稱 → 時間與地點 → 參賽資格・名額・報名費 → 參賽規則與自備器材 → 報名方式與獎品 → 常見問題 → 主辦與協辦 → 頁尾。比賽頁不放攤位費和攤商規則。
+- **報名開放時**：在 `cup/index.html` 搜尋 `✏️ 報名按鈕`，把兩個 `<button … disabled>報名即將開放</button>`（主視覺、報名方式）換成售票平台連結，註解裡有範例。組別、賽制、獎品公布後，也一併更新「參賽資格」「參賽規則」「獎品」和常見問題。
+- 首頁的西門盃橫幅在 `index.html` 搜尋 `西門盃橫幅`；導覽列的「G3 公開賽」也連到 `/cup/`。
+- 麗嬰國際、Funbox Toys 一律只用文字，不放 Logo 或產品圖片。
 
 ## 如何更新日期和費用
 
@@ -77,4 +90,6 @@ tanwan-market/
 
 ## 本機預覽
 
-直接雙擊 `index.html` 用瀏覽器打開即可。所有路徑都是相對路徑，放在 `/tanwan-market/` 子路徑底下也能正常運作。
+直接雙擊 `index.html` 用瀏覽器打開即可。所有路徑都是相對路徑。
+
+要連 `/cup/` 一起預覽，建議在 repo 根目錄執行 `python3 -m http.server 8000`，再用瀏覽器開 http://localhost:8000/ 和 http://localhost:8000/cup/ 。

@@ -279,6 +279,65 @@ a { color: inherit; }
 }
 .hero-burst-2 { top: auto; bottom: 18%; left: -4%; right: auto; font-size: 1.4rem; color: var(--orange-ink); }
 
+/* ---------- 西門盃：官方認證徽章（首頁橫幅與 /cup/ 共用） ---------- */
+.cup-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .35em;
+  margin: 0;
+  padding: 4px 14px 4px 10px;
+  background: var(--ink);
+  color: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: .875rem;
+  letter-spacing: .1em;
+  transform: rotate(-2deg);
+  box-shadow: 3px 3px 0 var(--white);
+}
+.cup-badge::before { content: "★"; color: var(--orange); letter-spacing: 0; }
+
+/* ---------- 首頁：西門盃橫幅 ---------- */
+.cup-promo { padding: 36px 0 4px; }
+.cup-promo-card {
+  display: grid;
+  align-items: center;
+  gap: 4px;
+  padding: 24px 20px 0;
+  background: var(--orange);
+  color: var(--ink);
+  border: 3px solid var(--ink);
+  border-radius: 28px;
+  box-shadow: 8px 8px 0 var(--ink);
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.cup-promo-card:hover { transform: translate(-2px, -2px); box-shadow: 10px 10px 0 var(--ink); }
+.cup-promo-text p { margin: 0; }
+.cup-promo-title { margin: 14px auto 6px; }
+.cup-promo-title img { width: min(100%, 440px); margin: 0 auto; }
+.cup-promo-meta { font-weight: 900; font-size: 1.0625rem; line-height: 1.5; }
+.cup-promo-meta span { display: block; }
+.cup-promo-date { font-size: 1.5rem; letter-spacing: .04em; }
+.cup-promo-cta {
+  display: inline-block;
+  margin: 14px 0 10px;
+  padding: 8px 22px;
+  background: var(--white);
+  border: 2.5px solid var(--ink);
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  font-weight: 900;
+  letter-spacing: .06em;
+}
+.cup-promo-co { font-size: .8125rem; font-weight: 700; }
+.cup-promo-cat { width: min(70%, 260px); margin: 4px auto 0; }
+.header-nav .nav-cup a { background: var(--orange); border: 2px solid var(--ink); padding: 4px 12px; }
+.header-nav .nav-cup a:hover { background: var(--orange); }
+
 /* ---------- sections ---------- */
 .section { padding: 64px 0; }
 .section-alt {
@@ -813,6 +872,21 @@ a { color: inherit; }
   .feature { grid-template-columns: 1fr 1fr; padding: 32px 48px; }
   .feature-text { text-align: left; }
 
+  .cup-promo-card { grid-template-columns: 1fr 260px; gap: 24px; padding: 28px 40px 0; text-align: left; }
+  .cup-promo-text {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    grid-template-areas: "badge badge" "title info";
+    column-gap: 36px;
+    align-items: center;
+    padding-bottom: 28px;
+  }
+  .cup-promo-text .cup-badge { grid-area: badge; justify-self: start; }
+  .cup-promo-title { grid-area: title; margin: 10px 0 0; }
+  .cup-promo-title img { margin: 0; }
+  .cup-promo-info { grid-area: info; padding-left: 28px; border-left: 2.5px dashed var(--ink); }
+  .cup-promo-meta span:first-child { white-space: nowrap; font-size: clamp(.875rem, 1.2vw, 1.0625rem); }
+  .cup-promo-cat { width: 100%; margin: 0; align-self: end; }
   .info-layout { grid-template-columns: 1.1fr .9fr; gap: 40px; }
   .info-art img { width: min(100%, 520px); }
 
