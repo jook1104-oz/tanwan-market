@@ -339,6 +339,9 @@ a { color: inherit; }
 .header-nav .nav-cup a { background: var(--orange); border: 2px solid var(--ink); padding: 4px 12px; }
 .header-nav .nav-cup a:hover { background: var(--orange); }
 
+/* ---------- 旋轉吧！西門 活動字標（首頁橫幅） ---------- */
+.cup-promo-title .cup-promo-event { width: min(72%, 320px); margin: 0 auto 4px; }
+
 /* ---------- sections ---------- */
 .section { padding: 64px 0; }
 .section-alt {
