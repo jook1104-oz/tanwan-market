@@ -185,6 +185,7 @@
 .cup-card p { color: var(--muted); }
 .cup-card .btn-disabled { margin-top: 4px; }
 .cup-card-cat { width: min(60%, 220px); margin: 0 auto; }
+.cup-practice .cup-practice-art { width: min(88%, 320px); }
 
 /* ---------- 每月賽事 ---------- */
 .cup-monthly { display: grid; gap: 20px; }
@@ -258,6 +259,7 @@
 .cup-day-date { font-weight: 900; }
 .cup-day-group { font-family: var(--font-fun); font-size: 1.25rem; color: var(--orange); }
 .cup-day-group small { display: block; white-space: nowrap; font-family: var(--font-body); font-size: .9375rem; font-weight: 700; color: var(--paper); }
+.cup-monthly-tip { margin-top: 2px; padding: 0 10px; background: var(--orange); color: var(--ink); border-radius: 999px; font-weight: 900; font-size: .875rem; }
 .cup-monthly-detail { margin-top: 4px; font-size: .9375rem; line-height: 1.5; }
 @media (max-width: 639px) {
   .cup-monthly-types { grid-template-columns: 1fr; }
@@ -321,7 +323,7 @@
   .cup-monthly { grid-template-columns: 1.25fr .75fr; align-items: stretch; }
   .cup-card.cup-monthly-main { display: flex; flex-direction: column; justify-content: center; padding: 28px 32px; }
   .cup-card.cup-practice { grid-template-columns: 1fr; gap: 12px; text-align: center; }
-  .cup-practice .cup-card-cat { width: min(70%, 200px); }
+  .cup-practice .cup-card-cat.cup-practice-art { width: min(92%, 300px); }
   .cup-card { grid-template-columns: 160px 1fr; gap: 20px; padding: 24px 28px; text-align: left; }
   .cup-card-cat { width: 100%; }
 }
