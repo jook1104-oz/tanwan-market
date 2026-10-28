@@ -320,7 +320,7 @@ a { color: inherit; }
 .cup-promo-title { margin: 14px auto 6px; }
 .cup-promo-title img { width: min(100%, 440px); margin: 0 auto; }
 .cup-promo-meta { font-weight: 900; font-size: 1.1875rem; line-height: 1.5; }
-.cup-promo-meta span { display: block; }
+.cup-promo-meta > span { display: block; }
 .cup-promo-date { font-size: 1.625rem; letter-spacing: .04em; }
 .cup-promo-cta {
   display: inline-block;
@@ -938,7 +938,7 @@ a { color: inherit; }
   .cup-promo-title { grid-area: title; margin: 10px 0 0; }
   .cup-promo-title img { margin: 0; }
   .cup-promo-info { grid-area: info; padding-left: 28px; border-left: 2.5px dashed var(--ink); }
-  .cup-promo-meta span:first-child { white-space: nowrap; font-size: clamp(1rem, 1.3vw, 1.1875rem); }
+  .cup-promo-meta > span:first-child { white-space: nowrap; font-size: clamp(1rem, 1.3vw, 1.1875rem); }
   .cup-promo-cat { width: 100%; margin: 0; align-self: end; }
   .info-layout { grid-template-columns: 1.1fr .9fr; gap: 40px; }
   .info-art img { width: min(100%, 520px); }
