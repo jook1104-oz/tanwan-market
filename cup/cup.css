@@ -258,6 +258,9 @@
 .cup-day-group { font-family: var(--font-fun); font-size: 1.25rem; color: var(--orange); }
 .cup-day-group small { display: block; font-family: var(--font-body); font-size: .9375rem; font-weight: 700; color: var(--paper); }
 .cup-monthly-detail { margin-top: 4px; font-size: .9375rem; line-height: 1.5; }
+@media (max-width: 639px) {
+  .cup-monthly-types { grid-template-columns: 1fr; }
+}
 
 /* ---------- 主辦與協辦 ---------- */
 .cup-org { padding: 32px 0; }
