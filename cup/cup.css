@@ -209,7 +209,8 @@
   box-shadow: 5px 5px 0 var(--orange);
   text-align: center;
 }
-.cup-monthly-name { font-family: var(--font-fun); font-size: 1.25rem; }
+.cup-monthly-mark { display: block; width: min(100%, 260px); margin: -4px 0 2px; }
+.cup-monthly-mark img { width: 100%; }
 .cup-monthly-count { font-weight: 700; }
 .cup-monthly-count strong {
   font-weight: 900;
