@@ -107,7 +107,7 @@
 }
 
 /* ---------- 參賽資格・名額・報名費 ---------- */
-.cup-entry { display: grid; gap: 16px; }
+.cup-entry { display: grid; gap: 22px; }
 .cup-stat {
   padding: 20px;
   background: var(--ink);
@@ -116,7 +116,20 @@
   box-shadow: 6px 6px 0 var(--orange);
   text-align: center;
 }
-.cup-stat h3 { font-size: 1.25rem; }
+.cup-stat h4 { margin: 0 0 4px; font-size: 1.25rem; }
+.cup-entry-groups { display: grid; gap: 22px; }
+.cup-entry-group { display: grid; gap: 12px; }
+.cup-entry-label {
+  justify-self: start;
+  margin: 0;
+  padding: 2px 16px;
+  background: var(--orange);
+  border: 2.5px solid var(--ink);
+  border-radius: 999px;
+  font-family: var(--font-fun);
+  font-size: 1.25rem;
+}
+.cup-entry-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .cup-stat p { margin: 0; }
 .cup-stat-num {
   font-weight: 900;
@@ -263,6 +276,10 @@
 .cup-monthly-detail { margin-top: 4px; font-size: .9375rem; line-height: 1.5; }
 @media (max-width: 639px) {
   .cup-monthly-types { grid-template-columns: 1fr; }
+  .cup-entry-stats { gap: 12px; }
+  .cup-entry-stats .cup-stat { padding: 16px 8px; border-radius: 20px; }
+  .cup-entry-stats .cup-stat-num { font-size: clamp(2.25rem, 10.5vw, 2.75rem); white-space: nowrap; }
+  .cup-entry-stats .cup-stat-note { font-size: .9375rem; white-space: nowrap; }
 }
 
 /* ---------- 主辦與協辦 ---------- */
@@ -294,8 +311,6 @@
   }
   .cup-timeline small { display: inline-block; margin: 0; width: auto; }
   .cup-timeline time { font-size: 1.25rem; }
-  .cup-entry { grid-template-columns: 1fr 1fr; }
-  .cup-entry-card { grid-column: 1 / -1; }
 }
 
 /* =========================================================
@@ -313,8 +328,8 @@
   .cup-when .info-item { align-content: center; }
   .cup-schedule { display: flex; flex-direction: column; justify-content: center; }
 
-  .cup-entry { grid-template-columns: 1fr 1fr 1.6fr; align-items: stretch; }
-  .cup-entry-card { grid-column: auto; display: flex; flex-direction: column; justify-content: center; }
+  .cup-entry { grid-template-columns: 1.35fr 1fr; gap: 28px; align-items: stretch; }
+  .cup-entry-card { display: flex; flex-direction: column; justify-content: center; }
   .cup-stat { display: flex; flex-direction: column; justify-content: center; }
 
   .cup-rules { grid-template-columns: 1.3fr .7fr; gap: 40px; }
