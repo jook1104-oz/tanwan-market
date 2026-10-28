@@ -3,10 +3,52 @@
    共用 ../styles.css 的品牌色、按鈕、區塊、FAQ、頁尾
    ========================================================= */
 
-.nobr { display: inline-block; }
-
 .cup-page .header-nav a,
 .cup-page .header-inner .btn { white-space: nowrap; }
+
+/* ---------- 旋轉吧！西門 活動字標（頁首、主視覺） ---------- */
+.cup-brand { display: flex; align-items: center; gap: 6px; flex: none; }
+.cup-brand .header-logo,
+.cup-brand-event { flex: none; }
+.cup-brand .header-logo img { width: 64px; }
+.cup-brand-x { font-weight: 900; font-size: 1rem; line-height: 1; }
+.cup-brand-event { width: 76px; }
+.cup-page .header-inner .btn-sm { padding-left: 14px; padding-right: 14px; }
+.cup-event {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+.cup-event-label {
+  padding: 0 12px;
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 999px;
+  font-weight: 900;
+  font-size: .9375rem;
+  letter-spacing: .2em;
+}
+.cup-event-logo { width: min(76%, 420px); }
+@media (min-width: 960px) {
+  .cup-brand { gap: 8px; }
+  .cup-brand .header-logo img { width: 92px; }
+  .cup-brand-event { width: 104px; }
+  .cup-page .header-inner { gap: 10px; }
+  .cup-page .header-nav ul { gap: 0; }
+  .cup-page .header-nav a { padding: 6px 7px; }
+  .cup-event { flex-direction: row; align-items: center; gap: 14px; }
+  .cup-event-logo { width: min(72%, 420px); }
+}
+
+@media (min-width: 1200px) {
+  .cup-brand { gap: 12px; }
+  .cup-brand .header-logo img { width: 120px; }
+  .cup-brand-event { width: 140px; }
+  .cup-page .header-nav ul { gap: 4px; }
+  .cup-page .header-nav a { padding: 6px 12px; }
+}
 
 /* ---------- 主視覺 ---------- */
 .cup-hero {
@@ -28,13 +70,6 @@
   align-items: center;
 }
 .cup-hero-text { text-align: center; }
-.cup-series {
-  margin: 0 0 6px;
-  color: var(--orange-ink);
-  font-weight: 900;
-  font-size: .9375rem;
-  letter-spacing: .15em;
-}
 .cup-title { margin: 0; }
 .cup-title img { width: min(100%, 560px); margin: 0 auto; }
 .cup-hero .cup-badge { margin-top: 10px; box-shadow: 3px 3px 0 var(--orange); }
