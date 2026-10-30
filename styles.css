@@ -387,7 +387,7 @@ a { color: inherit; }
 @media (min-width: 960px) {
   .vendors-why-intro { grid-template-columns: 1fr 220px; gap: 40px; }
   .vendors-why-cat { width: 100%; }
-  .vendors-why-cards { grid-template-columns: repeat(3, 1fr); align-items: stretch; gap: 20px; }
+  .vendors-why-cards { grid-template-columns: repeat(2, 1fr); align-items: stretch; gap: 20px; }
 }
 
 /* ---------- sections ---------- */
