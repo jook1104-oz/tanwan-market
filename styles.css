@@ -585,6 +585,11 @@ a { color: inherit; }
   font-weight: 700;
 }
 .price-next-btn { margin-top: 14px; }
+.price-plans { margin-top: 14px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.price-plans li { padding: 14px 8px; }
+.price-plans .price-next-amount { font-size: clamp(1.5rem, 6.8vw, 2.25rem); }
+.price-plans + .price-note { margin-top: 12px; }
+.price-plans .price-next-cond { font-size: .8125rem; }
 .price-included {
   padding-top: 18px;
   border-top: 2px dashed rgba(245, 241, 232, .5);
