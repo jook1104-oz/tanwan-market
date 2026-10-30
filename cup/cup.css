@@ -178,8 +178,12 @@
   border-radius: 50%;
   font-weight: 900;
   font-size: .9375rem;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  /* Noto Sans TC 的數字視覺偏下，往上推回圓心 */
+  padding-bottom: 2px;
 }
-.cup-rules-art img { width: min(70%, 300px); margin: 0 auto; }
+.cup-rules-art img { width: min(80%, 320px); margin: 0 auto; }
 
 /* ---------- 報名方式與獎品 ---------- */
 .cup-signup { display: grid; gap: 20px; }
@@ -344,7 +348,8 @@
   .cup-entry-card { display: flex; flex-direction: column; justify-content: center; }
   .cup-stat { display: flex; flex-direction: column; justify-content: center; }
 
-  .cup-rules { grid-template-columns: 1.3fr .7fr; gap: 40px; }
+  .cup-rules { grid-template-columns: 1.2fr .8fr; gap: 40px; }
+  .cup-rules-art img { width: min(100%, 420px); }
 
   .cup-signup { grid-template-columns: 1.2fr .8fr; }
   .cup-monthly { grid-template-columns: 1.25fr .75fr; align-items: stretch; }
