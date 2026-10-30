@@ -233,6 +233,18 @@
   color: var(--orange);
   font-variant-numeric: tabular-nums;
 }
+.cup-month-plan {
+  align-self: stretch;
+  margin: 0 0 16px;
+  padding: 14px 16px;
+  background: var(--paper);
+  border: 2px dashed var(--ink);
+  border-radius: 14px;
+}
+.cup-month-plan h3 { margin: 0 0 6px; font-size: 1.125rem; }
+.cup-month-plan ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.cup-month-plan li { display: flex; flex-wrap: wrap; gap: 2px 10px; align-items: baseline; font-weight: 700; }
+.cup-month-type { color: var(--orange-ink); font-weight: 900; }
 .cup-monthly-main .cup-monthly-note { font-size: 1rem; color: var(--muted); }
 .cup-practice { background: var(--paper-deep); border-style: dashed; }
 .cup-practice p { margin: 0; }
