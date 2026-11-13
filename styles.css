@@ -279,7 +279,7 @@ a { color: inherit; }
 }
 .hero-burst-2 { top: auto; bottom: 18%; left: -4%; right: auto; font-size: 1.5rem; color: var(--orange-ink); }
 
-/* ---------- 西門盃：官方認證徽章（首頁橫幅與 /cup/ 共用） ---------- */
+/* ---------- 西門盃：字卡徽章（首頁橫幅與 /cup/ 共用） ---------- */
 .cup-badge {
   display: inline-flex;
   align-items: center;
@@ -984,4 +984,68 @@ a { color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
+}
+
+/* =========================================================
+   聖誕版（只套用首頁 body.xmas；/cup/ 不受影響）
+   聖誕節後：拿掉 index.html 的 class="xmas" 並換回原圖即可
+   ========================================================= */
+.xmas {
+  --xmas-red: #C23B2E;
+  --xmas-green: #2F6B45;
+}
+/* 少量紅綠點綴：主視覺波浪改綠、區塊分隔線上綠下紅 */
+.xmas .hero::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='14' viewBox='0 0 40 14'%3E%3Cpath d='M0 7 Q10 0 20 7 T40 7' fill='none' stroke='%232F6B45' stroke-width='2.5'/%3E%3C/svg%3E");
+}
+.xmas .section-alt {
+  border-top-color: var(--xmas-green);
+  border-bottom-color: var(--xmas-red);
+}
+.xmas .hero-burst-2 { color: var(--xmas-red); }
+
+/* 主視覺：4:3 橫式插畫 */
+.xmas .hero-art { width: min(94%, 440px); }
+.xmas .hero-art::before {
+  inset: auto;
+  left: 18%;
+  top: 4%;
+  width: 64%;
+  aspect-ratio: 1 / 1;
+}
+
+/* 小配件：段落標題旁的角落點綴，不擋文字 */
+.xmas .section-head { position: relative; }
+.xmas-deco { position: absolute; pointer-events: none; }
+.xmas .section-head .xmas-deco {
+  top: -52px;
+  width: 46px;
+}
+.xmas .xmas-deco-right { right: 2%; transform: rotate(10deg); }
+.xmas .xmas-deco-left { left: 2%; transform: rotate(-10deg); }
+.xmas .hero-art .xmas-deco-hero {
+  position: absolute;
+  top: -4%;
+  left: 0;
+  width: 17%;
+  transform: rotate(-16deg);
+}
+
+/* 市集介紹：攤位卡改 4:3 */
+.xmas .vendor-card img { aspect-ratio: 4 / 3; }
+
+/* 給攤商、報名區、FAQ 插畫 */
+.xmas .vendors-why-cat { width: min(80%, 320px); }
+.xmas .signup-cat { width: min(88%, 360px); }
+.faq-art { width: min(80%, 340px); margin: -8px auto 24px; }
+
+@media (min-width: 960px) {
+  .xmas .hero-art { max-width: 560px; }
+  .xmas .section-head .xmas-deco { top: -30px; width: 76px; }
+  .xmas .xmas-deco-right { right: calc(50% - 360px); }
+  .xmas .xmas-deco-left { left: calc(50% - 360px); }
+  .xmas .vendors-why-intro { grid-template-columns: 1fr 320px; }
+  .xmas .vendors-why-cat { width: 100%; }
+  .xmas .signup-body { grid-template-columns: 1.15fr .85fr; }
+  .xmas .signup-cat { width: 100%; align-self: end; }
 }
