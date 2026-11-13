@@ -279,7 +279,7 @@ a { color: inherit; }
 }
 .hero-burst-2 { top: auto; bottom: 18%; left: -4%; right: auto; font-size: 1.5rem; color: var(--orange-ink); }
 
-/* ---------- 西門盃：官方認證徽章（首頁橫幅與 /cup/ 共用） ---------- */
+/* ---------- 西門盃：字卡徽章（首頁橫幅與 /cup/ 共用） ---------- */
 .cup-badge {
   display: inline-flex;
   align-items: center;
